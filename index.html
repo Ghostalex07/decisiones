@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisiones IA - Herramienta de Toma de Decisiones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Decisiones IA</h1>
+            <p class="subtitle">Herramienta de toma de decisiones razonadas con inteligencia artificial</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p>Esta aplicación te ayuda a estructurar decisiones complejas mediante prompts diseñados para obtener recomendaciones fundamentadas. Selecciona un caso, completa los datos y genera un prompt optimizado para usar con cualquier IA de libre acceso.</p>
+        </section>
+
+        <section class="selector-casos">
+            <h2>Selecciona un caso</h2>
+            <div class="casos-grid" id="casosGrid"></div>
+        </section>
+
+        <section class="formulario-caso" id="formularioCaso" style="display: none;">
+            <div class="caso-seleccionado">
+                <h2 id="casoNombre"></h2>
+                <p id="casoDescripcion"></p>
+            </div>
+
+            <form id="decisionForm">
+                <div class="campos-formulario" id="camposFormulario"></div>
+                
+                <div class="contexto-adicional">
+                    <label for="contextoLibre">Contexto adicional o restricciones:</label>
+                    <textarea id="contextoLibre" rows="3" placeholder="Añade cualquier información adicional relevante para la decisión..."></textarea>
+                </div>
+
+                <div class="consideraciones">
+                    <h3>Puntos a considerar:</h3>
+                    <ul id="listaConsideraciones"></ul>
+                </div>
+
+                <div class="acciones">
+                    <button type="button" id="btnGenerarPrompt" class="btn btn-primary">Generar Prompt</button>
+                    <button type="button" id="btnLimpiar" class="btn btn-secondary">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="resultado" id="resultado" style="display: none;">
+            <h2>Prompt Generado</h2>
+            <div class="prompt-container">
+                <pre id="promptGenerado"></pre>
+                <button type="button" id="btnCopiar" class="btn btn-copy">Copiar al portapapeles</button>
+            </div>
+            <div class="instrucciones-uso">
+                <h3>Cómo usar este prompt:</h3>
+                <ol>
+                    <li>Copia el prompt generado haciendo clic en el botón superior</li>
+                    <li>Pégalo en una IA de libre acceso (ChatGPT, Claude, Gemini, etc.)</li>
+                    <li>Recibe una recomendación estructurada y razonada</li>
+                    <li>Evalúa la respuesta críticamente antes de tomar la decisión final</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Herramienta educativa para el laboratorio de decisiones con IA</p>
+        </div>
+    </footer>
+
+    <script src="data/ejemplos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
