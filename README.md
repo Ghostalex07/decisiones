@@ -1,6 +1,6 @@
 # Decisiones IA
 
-Herramienta w3b para la toma de decisiones razonadas mediante inteligencia artificial.
+Herramienta web para la toma de decisiones razonadas mediante inteligencia artificial.
 
 ## Objetivo
 
